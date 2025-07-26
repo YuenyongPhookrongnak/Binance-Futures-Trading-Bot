@@ -1,0 +1,51 @@
+25-07-2025 22:02:29 INFO: Configuration:
+trading strategy: GPT_Market_Analysis
+leverage: 10
+order size: 2.5
+interval: 1h
+TP/SL choice: Dynamic_GPT
+SL mult: 1.5
+TP mult: 3.0
+trade all symbols: False
+symbols to trade: ['BTCUSDT', 'ETHUSDT', 'ADAUSDT']
+use trailing stop: False
+trailing stop callback: 0.1
+trading threshold: 0.3
+use market orders: True
+max number of positions: 3
+use multiprocessing for trade execution: True
+custom TP/SL Functions: ['USDT', 'Dynamic_GPT']
+make decision options: {'gpt_analysis_interval': 300, 'cache_gpt_responses': True, 'use_confluence_scoring': True, 'min_confluence_count': 3, 'enable_market_regime_filter': True}
+
+25-07-2025 22:02:29 INFO: GPT Configuration:
+API Key set: True
+Model: gpt-3.5-turbo
+Min Confidence: 75%
+Min Risk Reward: 3.0
+Max Daily Losses: 3
+Paper Trading: False
+25-07-2025 22:02:29 INFO: set_leverage() - Setting Leverage...
+25-07-2025 22:02:29 INFO: set_leverage() - (1/3) Setting leverage on BTCUSDT
+25-07-2025 22:02:30 INFO: set_leverage() - (2/3) Setting leverage on ETHUSDT
+25-07-2025 22:02:30 INFO: set_leverage() - (3/3) Setting leverage on ADAUSDT
+25-07-2025 22:02:30 INFO: setup_bots() - Beginning Bots setup...
+25-07-2025 22:02:30 INFO: setup_bots() - GPT Strategy Bot created for BTCUSDT
+25-07-2025 22:02:30 INFO: setup_bots() - GPT Strategy Bot created for ETHUSDT
+25-07-2025 22:02:30 INFO: setup_bots() - GPT Strategy Bot created for ADAUSDT
+25-07-2025 22:02:30 INFO: setup_bots() - Bots have completed setup. Total bots: 3
+25-07-2025 22:02:30 INFO: setup_bots() - GPT Strategy bots initialized: 3
+25-07-2025 22:02:30 INFO: start_websockets() - Starting Websockets...
+25-07-2025 22:02:31 INFO: get_required_buffer() - Calculating the required buffer for your strategy...
+25-07-2025 22:02:31 INFO: get_required_buffer() - GPT Strategy detected, using recommended buffer of 300 candles
+25-07-2025 22:02:31 INFO: convert_buffer_to_string() - required buffer calculated is 13 days ago
+25-07-2025 22:02:31 INFO: combine_data() - Combining Historical and web socket data...
+25-07-2025 22:02:31 INFO: combine_data() - (1/3) Gathering and combining data for BTCUSDT...
+25-07-2025 22:02:31 INFO: Historical data added for BTCUSDT: 311 candles
+25-07-2025 22:02:31 INFO: combine_data() - GPT Bot BTCUSDT has sufficient data (311 candles)
+25-07-2025 22:02:31 INFO: combine_data() - (2/3) Gathering and combining data for ETHUSDT...
+25-07-2025 22:02:32 INFO: Historical data added for ETHUSDT: 311 candles
+25-07-2025 22:02:32 INFO: combine_data() - GPT Bot ETHUSDT has sufficient data (311 candles)
+25-07-2025 22:02:32 INFO: combine_data() - (3/3) Gathering and combining data for ADAUSDT...
+25-07-2025 22:02:32 INFO: Historical data added for ADAUSDT: 311 candles
+25-07-2025 22:02:32 INFO: combine_data() - GPT Bot ADAUSDT has sufficient data (311 candles)
+25-07-2025 22:02:32 INFO: combine_data() - Finished Combining data for all symbols, Searching for trades now...
